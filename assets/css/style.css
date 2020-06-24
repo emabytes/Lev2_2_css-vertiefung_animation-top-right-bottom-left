@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin: 20px;
+    position: relative;
+    width: 60%;
+    height: 50vh;
+}
+
+div {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: red;
+    animation: moving-ball 4s ease-in infinite;
+}
+
+div:hover {
+    animation-play-state: paused;
+}
+
+@keyframes moving-ball {
+    0% {
+        background: red;
+        left: 0;
+        top: 0;
+    }
+    25% {
+        background: gold;
+        top: 0;
+        left: 100%;
+    }
+    50% {
+        background: green;
+        top: 100%;
+        left: 100%;
+    }
+    75% {
+        background: rgb(128, 128, 221);
+        bottom: 0;
+        top: 100%;
+        left: 0;
+    }
+    100% {
+        background: red;
+        bottom: 100%;
+        left: 0;
+        top: 0;
+    }
+}
